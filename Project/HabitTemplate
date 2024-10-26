@@ -1,0 +1,34 @@
+namespace Data
+{
+    class HabitTemplate
+    {
+        private string _habitName;
+        private string _habitDetails;
+        private string _day;
+
+        HabitTemplate(string habitName, string habitDetails)
+        {
+            _habitName = habitName;
+            _habitDetails = habitDetails;
+            _day = 0;
+        }
+
+        void Template()
+        {
+            System.Console.WriteLine($"{_habitName}");
+            System.Console.WriteLine($"{_habitDetails}");
+            System.Console.WriteLine($"Day: {_day}\n");
+        }
+
+        void Update(string habitName, string habitDetails)
+        {
+            _habitName = habitName;
+            _habitDetails = habitDetails;
+        }
+
+        void UpdateDay(int day)
+        {
+            _day = day;
+        }
+    }
+}
